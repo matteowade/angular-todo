@@ -1,0 +1,88 @@
+$icon-font-path: "fonts/bootstrap/";
+@import './../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss';
+
+.todo {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.todo__form {
+    margin: 40px auto;
+}
+
+.todo__input {
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 28px;
+    height: auto;
+}
+
+.todo__add-btn {
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: $brand-info;
+    width: 100%;
+    outline: none;
+    border: 0;
+    color: white;
+    &:hover {
+        background-color: darken($brand-info, 15%);
+    }
+    transition: background-color .3s;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list__item {
+    font-size: 22px;
+    margin: 15px 0;
+    padding: 15px 15px 10px 15px;
+    background-color: $gray-lighter;
+    border-radius: 8px;
+}
+
+.todo-list__description {
+    font-size: 28px;
+    color: black;
+    &--complete {
+        font-size: 28px;
+        text-decoration: line-through;
+        color: $gray-light;
+    }
+}
+
+.todo-list__done-btn {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: $brand-success;
+    width: 100%;
+    outline: none;
+    border: 0;
+    color: white;
+    &:hover {
+        background-color: darken($brand-success, 15%);
+    }
+    transition: background-color .3s;
+}
+
+.todo-list__delete-btn {
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    &:hover {
+        .glyphicon {
+            color: $brand-danger;
+        }
+    }
+    .glyphicon {
+        font-size: 40px;
+        color: $gray-light;
+        transition: background-color .3s;
+    }
+}

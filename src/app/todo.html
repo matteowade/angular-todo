@@ -1,0 +1,29 @@
+<div class="todo container">
+
+    <form class="todo__form">
+        <div class="row">
+            <div class="col-xs-8">
+                <input class="form-control todo__input" type="text" placeholder="New Todo Item" ng-model="$ctrl.newTodo" ng-keyup="handleEnterKey($event)" />
+            </div>
+            <div class="col-xs-4">
+                <input class="todo__add-btn" type="submit" value="Add" ng-click="$ctrl.add()">
+            </div>
+        </div>
+    </form>
+
+    <ul class="todo-list" ng-repeat="item in $ctrl.todos track by $index">
+        <li class="todo-list__item row">
+            <div class="col-xs-9">
+                <div ng-class="item.complete ? 'todo-list__description--complete' : 'todo-list__description'">{{item.description}}</div>
+            </div>
+            <div class="col-xs-2 text-right">
+                <button class="todo-list__done-btn" ng-click="$ctrl.complete($index)">Done</button>
+            </div>
+            <div class="col-xs-1 text-right">
+                <button class="todo-list__delete-btn" ng-click="$ctrl.delete($index)">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>
